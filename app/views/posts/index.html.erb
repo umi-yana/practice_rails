@@ -1,0 +1,29 @@
+<h1>Posts#index</h1>
+
+<%= render "posts/form",post_new:@post_new %>
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+      <th class="scope col">title</th>
+      <th class="scope col">content</th>
+      <th class="scope col"></th>
+      </tr>
+  </thead>
+  <tbody>
+       <% @post.each do |post| %>
+    <tr>
+       
+        <td><%= link_to post.title,edit_post_path(post) %></td>
+        <td><%= post.content %></td>
+       
+    </tr>
+    <% end %>
+</table>
+
+
+
+<% @post.each do |post| %>
+<%= post.title%>
+<%= post.content%>
+<% end %>

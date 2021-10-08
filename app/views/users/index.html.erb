@@ -1,0 +1,22 @@
+
+<div class="jumbotron">
+    <h2>Twitter</h2>
+    <p class="lead">
+        <%= render "posts/form",post_new:@post_new %>
+    </p>
+</div>
+
+
+<table class="table">
+  <tr>
+      <th>user_name</th>
+      <th>user_id</th>
+      </tr>
+    <% @users.each do |users| %>
+      <tr>
+      <td><%= link_to users.name,user_path(users) %></td>
+      <td><%= users.id %></td>
+    </tr>
+      <% end %>
+</table>
+

@@ -1,0 +1,15 @@
+<%= form_with model:post_new,local:true do |f| %>
+<div class="form">
+    <div class="text-center mb-4">
+        <h4 class="text-center mb-4">
+            <%= f.text_field :title %>  </h4>
+            <h4 class="text-center mb-4">  
+                <%= f.text_area :content %>  </h4> 
+                <h4 class="text-center mb-4">
+                <%= f.submit"投稿する"%>  </h4>
+     
+    </div>
+</div>
+
+<% end %>
+
